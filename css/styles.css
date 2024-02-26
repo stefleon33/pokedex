@@ -42,3 +42,20 @@ Background Color (Gray): #E3E3E3;
     color: #1C3FA6;
     margin: 10px;
   }
+
+/* index Grid 
+start grid fallback 
+.pokemonList_item{
+    display: inline-block;
+    width: 33%;
+   }
+ end grid fallback 
+  
+  .pokemonList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 10px;
+  } 
+  */
+  
