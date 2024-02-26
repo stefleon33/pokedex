@@ -6,6 +6,21 @@ Primary Color (Blue): #1C3FA6;
 Secondary Color (Red): #940000;
 Background Color (Gray): #E3E3E3;
  */
+
+ body {
+    font-family: "roboto mono", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    color: #000000;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e3e3e3;
+    }
+  
   h1{
     font-size: 32px;
     font-weight: bold;
