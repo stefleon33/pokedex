@@ -14,7 +14,9 @@ for (let i=0; i < pokemonList.length; i++) {
     document.write(`${pokemonList[i].name} (height: ${pokemonList[i].height} feet)`);
 
     if (pokemonList[i].height >6 ){
-        document.write (" - Wow, that's a big one!");
+        document.write (" - Wow, that's big!");
+    }else if (pokemonList[i].height <2 ){
+        document.write (" - They are tiny!");
     }
 
     document.write('<br>');
