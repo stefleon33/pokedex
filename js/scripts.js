@@ -8,4 +8,14 @@ let pokemonList = [
     {pokedex: '0007', name: 'Squirtle', height: 1.08, weight: 19.8, type: 'water', category:'Tiny Turtle', abilities:'Torrent'},
     {pokedex: '0008', name: 'Wartortle', height: 3.03, weight: 49.6, type: 'water', category:'Turtle', abilities:'Torrent'},
     {pokedex: '0009', name: 'Blastoise', height: 5.03, weight: 188.5, type: 'water', category:'Shellfish', abilities:'Torrent'},
-]
+];
+
+for (let i=0; i < pokemonList.length; i++) {
+    document.write(`${pokemonList[i].name} (height: ${pokemonList[i].height} feet)`);
+
+    if (pokemonList[i].height >6 ){
+        document.write (" - Wow, that's a big one!");
+    }
+
+    document.write('<br>');
+}
