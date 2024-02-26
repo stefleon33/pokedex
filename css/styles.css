@@ -6,3 +6,11 @@ Primary Color (Blue): #1C3FA6;
 Secondary Color (Red): #940000;
 Background Color (Gray): #E3E3E3;
  */
+  h1{
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #1C3FA6;
+    margin: 10px;
+  }
