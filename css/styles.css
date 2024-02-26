@@ -23,6 +23,17 @@ Background Color (Gray): #E3E3E3;
     text-align: left;
     }
   
+  * {
+    box-sizing: border-box;
+     }
+  
+  /* Header */
+  .page-header{
+    display:flex;
+    width: 100%;
+    padding: 20px;
+  }
+
   h1{
     font-size: 32px;
     font-weight: bold;
