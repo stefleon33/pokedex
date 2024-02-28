@@ -19,11 +19,18 @@ let pokemonList3 = [
     {pokedex: '0009', name: 'Blastoise', height: 5.03, weight: 188.5, type: 'water', category:'Shellfish', abilities:'Torrent'},
 ];
 
-    if (pokemonList[i].height >6 ){
+function printArrayDetails(list){
+    for (let i = 0; i < list.length; i++) {
+        document.write(list[i].name  + " (" + list[i].height + " feet) ");
+        if (list[i].height > 6 ){
         document.write (" - Wow, that's big!");
-    }else if (pokemonList[i].height <2 ){
+     }else if (list[i].height < 2 ){
         document.write (" - Dang, they are tiny!");
-    }
-
-    document.write('<br>');
+     }
 }
+}
+
+printArrayDetails(pokemonList1);
+printArrayDetails(pokemonList2);
+printArrayDetails(pokemonList3);
+
