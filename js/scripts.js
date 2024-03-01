@@ -41,9 +41,4 @@ pokemonList.forEach(displayPokemonInfo);
 
 }) ()
 
-// Display information for each Pokemon in the lists
-pokemonList1.forEach(displayPokemonInfo);
-document.write('<br>');
-pokemonList2.forEach(displayPokemonInfo);
-document.write('<br>');
-pokemonList3.forEach(displayPokemonInfo);
+document.write(pokemonRepository.getAll())
