@@ -19,18 +19,46 @@ let pokemonList3 = [
     {pokedex: '0009', name: 'Blastoise', height: 5.03, weight: 188.5, type: 'water', category:'Shellfish', abilities:'Torrent'},
 ];
 
-function printArrayDetails(list){
-    for (let i = 0; i < list.length; i++) {
-        document.write(list[i].name  + " (" + list[i].height + " feet) ");
-        if (list[i].height > 6 ){
-        document.write (" - Wow, that's big!");
-     }else if (list[i].height < 2 ){
-        document.write (" - Dang, they are tiny!");
-     }
-}
+
+function myLoopFunction(pokemonList1) {
+
+   document.write (`${pokemonList1.name}  (${pokemonList1.height} feet) `);
+    if (pokemonList1.height > 6) {
+        document.write(" - Wow, that's big!");
+    } else if (pokemonList1.height < 2) {
+        document.write(" - Dang,they are tiny!");
+    }
+    document.write('<br>');
 }
 
-printArrayDetails(pokemonList1);
-printArrayDetails(pokemonList2);
-printArrayDetails(pokemonList3);
+pokemonList1.forEach(myLoopFunction);
+document.write('<br>');
+
+function myLoopFunction(pokemonList2) {
+
+    document.write (`${pokemonList2.name}  (${pokemonList2.height} feet) `);
+     if (pokemonList2.height > 6) {
+         document.write(" - Wow, that's big!");
+     } else if (pokemonList2.height < 2) {
+         document.write(" - Dang,they are tiny!");
+     }
+     document.write('<br>');
+ }
+ 
+ pokemonList2.forEach(myLoopFunction);
+ document.write('<br>');
+
+
+ function myLoopFunction(pokemonList3) {
+
+    document.write (`${pokemonList3.name}  (${pokemonList3.height} feet) `);
+     if (pokemonList3.height > 6) {
+         document.write(" - Wow, that's big!");
+     } else if (pokemonList3.height < 2) {
+         document.write(" - Dang,they are tiny!");
+     }
+     document.write('<br>');
+ }
+ 
+ pokemonList3.forEach(myLoopFunction);
 
