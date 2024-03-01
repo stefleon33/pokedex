@@ -15,14 +15,31 @@ let pokemonRepository = (function() {
 
 // Function to display Pokemon information
 function displayPokemonInfo(pokemon) {
-   document.write (`${pokemon.name} (${pokemon.height} feet) `);
-    if (pokemon.height > 6) {
-        document.write(" - Wow, that's big!");
-    } else if (pokemon.height < 2) {
-        document.write(" - Dang,they are tiny!");
+    document.write (`${pokemon.name} (${pokemon.height} feet) `);
+     if (pokemon.height > 6) {
+         document.write(" - Wow, that's big!");
+     } else if (pokemon.height < 2) {
+         document.write(" - Dang,they are tiny!");
+     }
+     document.write('<br>');
+ }
+
+// Display information for each Pokemon in the list
+pokemonList.forEach(displayPokemonInfo); 
+
+    function getAll () {
+        return pokemonList;
     }
-    document.write('<br>');
-}
+    function add (pokemon) {
+        pokemonList.push(pokemon);
+    }
+    
+    return {
+        getAll: getAll,
+        add: add
+    }
+
+}) ()
 
 // Display information for each Pokemon in the lists
 pokemonList1.forEach(displayPokemonInfo);
