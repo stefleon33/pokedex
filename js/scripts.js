@@ -24,9 +24,6 @@ function displayPokemonInfo(pokemon) {
      document.write('<br>');
  }
 
-// Display information for each Pokemon in the list
-pokemonList.forEach(displayPokemonInfo); 
-
     function getAll () {
         return pokemonList;
     }
@@ -41,4 +38,5 @@ pokemonList.forEach(displayPokemonInfo);
 
 }) ()
 
-document.write(pokemonRepository.getAll())
+// Display information for each Pokemon in the list
+pokemonRepository.getAll().forEach(pokemonRepository.displayPokemonInfo);
