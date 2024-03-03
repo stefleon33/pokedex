@@ -33,7 +33,8 @@ function displayPokemonInfo(pokemon) {
     
     return {
         getAll: getAll,
-        add: add
+        add: add,
+        displayPokemonInfo: displayPokemonInfo
     }
 
 }) ()
