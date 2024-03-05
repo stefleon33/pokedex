@@ -1,7 +1,7 @@
 let pokemonRepository = (function() {
     
     //pokemonList
-    let pokemonList = [
+    let repository = [
         {pokedex: '0001', name: 'Bulbasaur', height: 2.04, weight: 15.2, type: ['grass', 'poison'], category:'Seed', abilities:'Overgrow'}, 
         {pokedex: '0004', name: 'Charmander', height: 2, weight: 18.7, type: 'fire', category:'Lizard', abilities:'Blaze'}, 
         {pokedex: '0007', name: 'Squirtle', height: 1.08, weight: 19.8, type: 'water', category:'Tiny Turtle', abilities:'Torrent'},
@@ -25,10 +25,10 @@ function displayPokemonInfo(pokemon) {
  }
 
     function getAll () {
-        return pokemonList;
+        return repository;
     }
     function add (pokemon) {
-        pokemonList.push(pokemon);
+        repository.push(pokemon);
     }
     
     return {
