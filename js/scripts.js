@@ -50,5 +50,10 @@ function displayPokemonInfo(pokemon) {
 
 }) ()
 
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+});
+
 // Display information for each Pokemon in the list
 pokemonRepository.getAll().forEach(pokemonRepository.displayPokemonInfo);
