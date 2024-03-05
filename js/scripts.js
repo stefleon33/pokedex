@@ -44,6 +44,7 @@ function displayPokemonInfo(pokemon) {
     return {
         getAll: getAll,
         add: add,
+        addListItem: addListItem,
         displayPokemonInfo: displayPokemonInfo
     }
 
