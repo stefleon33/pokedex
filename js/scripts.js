@@ -56,4 +56,4 @@ pokemonRepository.getAll().forEach(function (pokemon) {
 });
 
 // Display information for each Pokemon in the list
-pokemonRepository.getAll().forEach(pokemonRepository.displayPokemonInfo);
+//pokemonRepository.getAll().forEach(pokemonRepository.displayPokemonInfo);
