@@ -71,3 +71,22 @@ div{
     color:#000000;
     border: 2px solid #1C3FA6;
 }
+
+button:hover {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+    transition: transform 0.25s;
+    transform:scale(1.1);
+  }
+
+  
+button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+    transition: transform 0.25s;
+    transform:scale(1.1);
+  }
