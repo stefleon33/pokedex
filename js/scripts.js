@@ -4,21 +4,34 @@ let pokemonRepository = (function() {
     let repository = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-// Function to display Pokemon information
-function displayPokemonInfo(pokemon) {
-    document.write (`${pokemon.name} (${pokemon.height} feet) `);
-     if (pokemon.height > 6) {
-         document.write(" - Wow, that's big!");
-     } else if (pokemon.height < 2) {
-         document.write(" - Dang,they are tiny!");
-     }
-     document.write('<br>');
- }
+    // Function to display Pokemon information
+    function displayPokemonInfo(pokemon) {
+        document.write(`${pokemon.name} (${pokemon.height} feet) `);
+        if (pokemon.height > 6) {
+            document.write(" - Wow, that's big!");
+        } else if (pokemon.height < 2) {
+            document.write(" - Dang,they are tiny!");
+        }
+        document.write('<br>');
+    }
 
-    function getAll () {
+    function add(pokemon){
+        if (
+            typeof pokemon === "object" &&
+            "name" in pokemon &&
+            "height" in pokemon &&
+            "types" in pokemon
+        ) {
+            repository.push(pokemon);
+        } else {
+            console.log("pokemon is not correct");
+        }
+    }
+
+    function getAll() {
         return repository;
     }
-    function add (pokemon) {
+    function add(pokemon) {
         repository.push(pokemon);
     }
 
