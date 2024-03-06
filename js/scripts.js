@@ -1,6 +1,8 @@
 let pokemonRepository = (function() {
     
     //pokemonList
+    let repository = [];
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 // Function to display Pokemon information
 function displayPokemonInfo(pokemon) {
