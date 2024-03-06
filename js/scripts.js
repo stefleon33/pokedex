@@ -1,5 +1,5 @@
-let pokemonRepository = (function() {
-    
+let pokemonRepository = (function () {
+
     //pokemonList
     let repository = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -35,7 +35,7 @@ let pokemonRepository = (function() {
         repository.push(pokemon);
     }
 
-    function addListItem(pokemon){
+    function addListItem(pokemon) {
         let pokemonList = document.querySelector(".pokemon-list");
         let listpokemon = document.createElement("li");
         let button = document.createElement("button");
@@ -84,7 +84,7 @@ let pokemonRepository = (function() {
             console.log(pokemon);
         });
     }
-
+    
     return {
         add: add,
         getAll: getAll,
@@ -95,8 +95,7 @@ let pokemonRepository = (function() {
         showDetails: showDetails
     }
 
-}) ()
-
+})()
 
 pokemonRepository.loadList().then(function() {
     // Now the data is loaded!
