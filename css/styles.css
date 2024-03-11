@@ -147,3 +147,34 @@ button:focus {
     transition: transform 0.25s;
     transform:scale(1.1);
   }
+
+/*responsive formatting for grid */
+@media all and (max-width: 500px) {
+    .pokemon-list {
+      grid-template-columns: 1fr;
+    }
+   }
+@media all and (min-width: 500px) and (max-width: 700px){
+    .pokemon-list {
+      grid-template-columns: 1fr 1fr;
+    }
+}   
+@media all and (min-width: 700px) and (max-width: 900px){
+    .pokemon-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media all and (min-width: 900px) and (max-width: 1100px){
+    .pokemon-list{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media all and (min-width: 1100px) and (max-width: 1300px){
+        .pokemon-list{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+    h1 {
+      font-size: 22px;
+    }
+  }
