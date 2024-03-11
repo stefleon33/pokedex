@@ -92,8 +92,11 @@ let pokemonRepository = (function () {
       });
     }
         
+
+    //Function to add a Pokemon to the list
     }
 
+    //Function to get the list of all Pokemon
     function getAll() {
         return repository;
     }
@@ -114,6 +117,7 @@ let pokemonRepository = (function () {
         })
     }
 
+    //Function to fetch and load the Pokemon list from the API
     function loadList() {
         return fetch(apiUrl).then(function (response) {
           return response.json();
@@ -131,6 +135,7 @@ let pokemonRepository = (function () {
         })
       }
       
+    //Function to  fetch and load details for a specific Pokemon  
     function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
@@ -145,6 +150,7 @@ let pokemonRepository = (function () {
         });
       }
 
+    //Function to show details of a Pokemon
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function() {
             showModal (pokemon);
