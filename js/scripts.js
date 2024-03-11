@@ -94,6 +94,8 @@ let pokemonRepository = (function () {
         
 
     //Function to add a Pokemon to the list
+    function add(pokemon){
+         repository.push(pokemon);
     }
 
     //Function to get the list of all Pokemon
