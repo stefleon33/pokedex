@@ -98,6 +98,16 @@ ul{
     text-align: center;
 }
 
+.modal {
+margin: auto;
+display: inline-block;
+box-sizing: border-box;
+background: #fff;
+padding: 15px;
+width: 100%;
+max-width: 700px;
+text-align: left;
+}
 
 .button-class {
     background-color: #1C3FA6;
