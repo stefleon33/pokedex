@@ -29,9 +29,10 @@ Background Color (Gray): #E3E3E3;
   
   /* Header */
   .page-header{
-    display:flex;
+    display:inline-block;
     width: 100%;
     padding: 20px;
+    text-align: center;
   }
 
   h1{
