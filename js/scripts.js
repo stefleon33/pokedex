@@ -47,19 +47,19 @@ let pokemonRepository = (function () {
        imageElement.setAttribute('src',pokemon.imageUrl)
 
        let heightElement = document.createElement('p');
-       heightElement.textContent = 'Height: ${pokemon.height}';
+       heightElement.textContent = `Height: ${pokemon.height}`;
 
        let weightElement = document.createElement('p');
-       weightElement.textContent = 'Weight: ${pokemon.weight}';
+       weightElement.textContent = `Weight: ${pokemon.weight}`;
 
        let typesElement = document.createElement('p');
-       let typesNames = pokemon.types.map(typesItem => typesItem.types.name).join(", ");
-       typesElement.textContent = 'Types: ${typesNames}';
+       let typesNames = pokemon.types.map(typesItem => typesItem.type.name).join(", ");
+       typesElement.textContent = `Types: ${typesNames}`;
 
        let abilitiesElement = document.createElement('p');
-       let abilitiesNames = pokemon.abilities.map(abilitiesItem => abilitiesItem.abilities.name)
+       let abilitiesNames = pokemon.abilities.map(abilitiesItem => abilitiesItem.ability.name)
                        .join(", ");
-       abilitiesElement.textContent = 'Abilities: ${abilitiesNames}';
+       abilitiesElement.textContent = `Abilities: ${abilitiesNames}`;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
@@ -153,6 +153,7 @@ let pokemonRepository = (function () {
           item.imageUrl = details.sprites.front_default;
           item.height = details.height;
           item.types = details.types;
+          item.abilities = details.abilities;
         }).catch(function (e) {
           console.error(e);
         });
