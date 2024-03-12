@@ -54,7 +54,7 @@ let pokemonRepository = (function () {
 
        let typesElement = document.createElement('p');
        let typesNames = pokemon.types.map(typesItem => typesItem.type.name).join(", ");
-       typesElement.textContent = `Types: ${typesNames}`;
+       typesElement.textContent = `Type(s): ${typesNames}`;
 
        let abilitiesElement = document.createElement('p');
        let abilitiesNames = pokemon.abilities.map(abilitiesItem => abilitiesItem.ability.name)
