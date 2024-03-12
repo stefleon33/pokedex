@@ -46,14 +46,28 @@ let pokemonRepository = (function () {
         
 
        //Creating elements to display Pokemon details in the modal
-       let nameElement = ('<h1>' + pokemon.name + '</h1>');
-       let imageElement = (
-           '<img class="modal-img" style="width:50%>').attr(
-               "src",pokemon.imageUrl);
-       let heightElement = ("<p>" + "Height: " + pokemon.height + "</p>");
-       let weightElement = ("<p>" + "Weight: " + pokemon.weight + "</p>");
-       let typesElement = ("<p>" + "Types: " + pokemon.types.join(", ") + "</p>");
-       let abilitiesElement = ("<p>" + "Abilities: " + pokemon.abilities.join(", ") + "</p>");
+       let nameElement = document.createElement('h1');
+       nameElement.textContent = pokemon.name;
+
+       let imageElement = document.createElement('img');
+       imageElement.classList.add('modal-img');
+       imageElement.style.width = '50%';
+       imageElement.setAttribute('src',pokemon.imageUrl)
+
+       let heightElement = document.createElement('p');
+       heightElement.textContent = 'Height: ${pokemon.height}';
+
+       let weightElement = document.createElement('p');
+       weightElement.textContent = 'Weight: ${pokemon.weight}';
+
+       let typesElement = document.createElement('p');
+       let typesNames = pokemon.types.map(typesItem => typesItem.types.name).join(", ");
+       typesElement.textContent = 'Types: ${typesNames}';
+
+       let abilitiesElement = document.createElement('p');
+       let abilitiesNames = pokemon.abilities.map(abilitiesItem => abilitiesItem.abilities.name)
+                       .join(", ");
+       abilitiesElement.textContent = 'Abilities: ${abilitiesNames}';
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
