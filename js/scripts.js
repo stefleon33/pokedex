@@ -74,7 +74,6 @@ let pokemonRepository = (function () {
       modal.appendChild(contentElement);
       modalContainer.appendChild(modal);
       //Appending elements to the modal
-      titleElement.appendChild(nameElement);
       contentElement.appendChild(imageElement);
       contentElement.appendChild(heightElement);
       contentElement.appendChild(weightElement);
