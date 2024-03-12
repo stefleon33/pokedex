@@ -90,10 +90,6 @@ let pokemonRepository = (function () {
         if (target === modalContainer) {
           hideModal();
         }
-      })
-
-      document.querySelector('.pokemon-list').addEventListener('click', () => {
-        showModal('')
       });
     }
         
