@@ -117,7 +117,7 @@ text-align: center;
 text-transform: capitalize;
 }
 
-.button-class {
+.button-class, .modal-close {
     background-color: #1C3FA6;
     border: none;
     width: 164.8px;
@@ -135,6 +135,10 @@ text-transform: capitalize;
     background-color: white;
     color:#000000;
     border: 2px solid #1C3FA6;
+}
+
+.modal-close {
+
 }
 
 button:hover {
