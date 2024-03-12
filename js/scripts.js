@@ -61,7 +61,7 @@ let pokemonRepository = (function () {
                        .join(", ");
        abilitiesElement.textContent = `Abilities: ${abilitiesNames}`;
 
-      modal.appendChild(closeButtonElement);
+      
       modal.appendChild(titleElement);
       modal.appendChild(contentElement);
       modalContainer.appendChild(modal);
@@ -71,6 +71,7 @@ let pokemonRepository = (function () {
       contentElement.appendChild(weightElement);
       contentElement.appendChild(typesElement);
       contentElement.appendChild(abilitiesElement);
+      modal.appendChild(closeButtonElement);
       
 
       modalContainer.classList.add('is-visible');
