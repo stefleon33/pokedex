@@ -33,7 +33,7 @@ let pokemonRepository = (function () {
       closeButtonElement.addEventListener('click', hideModal);
 
       let titleElement = document.createElement('h1');
-      titleElement.innerText = title
+      titleElement.innerText = pokemon.name; 
 
       let contentElement = document.createElement('p');
 
