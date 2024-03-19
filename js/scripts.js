@@ -47,6 +47,14 @@ pokemonRepository.loadDetails(pokemon).then(function() {
   });
   });
 }
+
+//Function to show details of a Pokemon
+function showDetails(item) {
+  pokemonRepository.loadDetails(item).then(function() {
+      showModal (item);
+  });
+  }
+
       });
     }
         
@@ -87,14 +95,6 @@ pokemonRepository.loadDetails(pokemon).then(function() {
         });
       }
 
-    //Function to show details of a Pokemon
-    function showDetails(pokemon) {
-        loadDetails(pokemon).then(function() {
-            showModal (pokemon);
-        });
-        }
-    
-    
   // Function to show deatils of a Pokemon in a modal
   function showModal(pokemon) {
 
