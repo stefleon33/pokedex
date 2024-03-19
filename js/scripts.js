@@ -165,22 +165,21 @@ let pokemonRepository = (function () {
         }
     
     
-    return {
-        add: add,
-        getAll: getAll,
-        loadList: loadList,
-        loadDetails: loadDetails,
-        addListItem: addListItem,
-        displayPokemonInfo: displayPokemonInfo,
-        showDetails: showDetails
-    }
-
-})()
 
 pokemonRepository.loadList().then(function() {
     // Now the data is loaded!
     pokemonRepository.getAll().forEach(function(pokemon){
       pokemonRepository.addListItem(pokemon);
+  return {
+      add: add,
+      getAll: getAll,
+      addListItem: addListItem,
+      loadList: loadList,
+      loadDetails: loadDetails,
+      showModal: showModal,
+  };
+
+})();
 
       let listItem = document.createElement("li");
       listItem.classList.add("list-group-item");
