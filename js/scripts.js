@@ -14,34 +14,42 @@ let pokemonRepository = (function () {
         }
         document.write('<br>');
     }
+function add(pokemon) {
+repository.push(pokemon);
+}
+
 function getAll() {
 return repository;
 }
 
+function addListItem(pokemon) {
+pokemonRepository.loadDetails(pokemon).then(function() {
+  var $row = $(".row");
+  var $card = $('<div class="card text-center" style="width:250px"></div>');
+  var $image = $('<img class="card-img-top" alt="Image of pokemon" style="width:50%" />');
+  $image.attr("src", pokemon.imageUrlFront);
+
+  var $cardBody = $('<div class ="card-body"></div>');
+  var $cardTitle= $("<h4 class='card-title'>" + pokemon.name + "</h4>");
+  var $seeProfile = $(
+    '<button type= "button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">See Details</button>'
+    );
+  
+    $row.append($card);
+    //Append the image to each card
+    $card.append($image);
+    $card.append($cardBody);
+    $cardBody.append($cardTitle);
+    $cardBody.append($seeProfile);
+  
+  $seeProfile.on("click", function(event){
+    showDetails(pokemon);
+  });
+  });
+}
       });
     }
         
-
-    //Function to add a Pokemon to the list
-    function add(pokemon){
-         repository.push(pokemon);
-    }
-    function add(pokemon) {
-        repository.push(pokemon);
-    }
-
-    function addListItem(pokemon) {
-        let pokemonList = document.querySelector(".pokemon-list");
-        let listpokemon = document.createElement("li");
-        let button = document.createElement("button");
-        button.innerText = pokemon.name;
-        button.classList.add("button-class")
-        listpokemon.appendChild(button);
-        pokemonList.appendChild(listpokemon);
-        button.addEventListener("click", function (_event) {
-            showDetails(pokemon);
-        })
-    }
 
     //Function to fetch and load the Pokemon list from the API
     function loadList() {
