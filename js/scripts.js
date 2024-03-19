@@ -15,82 +15,6 @@ let pokemonRepository = (function () {
         document.write('<br>');
     }
 
-    let modalContainer = document.querySelector('#modal-container');
-
-    // Function to show deatils of a Pokemon in a modal
-    function showModal(pokemon) {
-      
-    //Clear all exisiting modal content
-      modalContainer.innerHTML = '';
-
-      let modal = document.createElement('div');
-      modal.classList.add('modal');
-
-      //Close button details
-      let closeButtonElement = document.createElement('button');
-      closeButtonElement.classList.add('modal-close');
-      closeButtonElement.innerText = 'Close';
-      closeButtonElement.addEventListener('click', hideModal);
-
-      let titleElement = document.createElement('h1');
-      titleElement.innerText = pokemon.name; 
-
-      let contentElement = document.createElement('p');
-
-       //Creating elements to display Pokemon details in the modal
-       let nameElement = document.createElement('h1');
-       nameElement.textContent = pokemon.name;
-
-       let imageElement = document.createElement('img');
-       imageElement.classList.add('modal-img');
-       imageElement.style.width = '50%';
-       imageElement.setAttribute('src',pokemon.imageUrl)
-
-       let heightElement = document.createElement('p');
-       heightElement.textContent = `Height: ${pokemon.height}`;
-
-       let weightElement = document.createElement('p');
-       weightElement.textContent = `Weight: ${pokemon.weight}`;
-
-       let typesElement = document.createElement('p');
-       let typesNames = pokemon.types.map(typesItem => typesItem.type.name).join(", ");
-       typesElement.textContent = `Type(s): ${typesNames}`;
-
-       let abilitiesElement = document.createElement('p');
-       let abilitiesNames = pokemon.abilities.map(abilitiesItem => abilitiesItem.ability.name)
-                       .join(", ");
-       abilitiesElement.textContent = `Abilities: ${abilitiesNames}`;
-
-      
-      modal.appendChild(titleElement);
-      modal.appendChild(contentElement);
-      modalContainer.appendChild(modal);
-      //Appending elements to the modal
-      contentElement.appendChild(imageElement);
-      contentElement.appendChild(heightElement);
-      contentElement.appendChild(weightElement);
-      contentElement.appendChild(typesElement);
-      contentElement.appendChild(abilitiesElement);
-      modal.appendChild(closeButtonElement);
-      
-
-      modalContainer.classList.add('is-visible');
-
-      function hideModal(){
-        modalContainer.classList.remove('is-visible');
-      }
-
-      window.addEventListener('keydown', (e) =>{
-        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
-          hideModal();
-        }
-      });
-
-      modalContainer.addEventListener('click', (e) => {
-        let target = e.target;
-        if (target === modalContainer) {
-          hideModal();
-        }
       });
     }
         
@@ -165,6 +89,45 @@ let pokemonRepository = (function () {
         }
     
     
+  // Function to show deatils of a Pokemon in a modal
+  function showModal(pokemon) {
+
+    let modalBody = $(".modal-body");
+    let modalTitle = $(".modal-title");
+    let modalHeader = $(".modal-header");
+
+    modalTitle.empty();
+    modalBody.empty();
+
+    //creating element for name in modal content
+    let nameElement = $("<h1>" + pokemon.name + "</h1>");
+
+    //creating img in modal content
+    let imageElementFront = $('<img class="modal-img" alt="Image of front pokemon" style="width:50%">');
+    imageElementFront.attr("src", pokemon.imageUrlFront);
+    let imageElementBack = $('<img class="modal-img" alt="Image of back pokemon" style="width:50%">');
+    imageElementBack.attr("src", pokemon.imageUrlBack);
+
+    //creating element for height in modal content
+    let heightElement = $("<p>" + "height : " + pokemon.height + "</p>");
+
+    //creating element for weight in modal content
+    let weightElement = $("<p>" + "weight : " + pokemon.weight + "</p>");
+
+     //creating element for types in modal content
+     let typesElement = $("<p>" + "types : " + pokemon.types + "</p>");
+
+     //creating element for abilities in modal content
+     let abilitiesElement = $("<p>" + "abilities : " + pokemon.abilities  + "</p>");
+
+    modalTitle.append(nameElement);
+    modalBody.append(imageElementFront);
+    modalBody.append(imageElementBack);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typesElement);
+    modalBody.append(abilitiesElement);
+  }
 
 pokemonRepository.loadList().then(function() {
     // Now the data is loaded!
