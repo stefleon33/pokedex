@@ -76,24 +76,28 @@ function showDetails(item) {
         }).catch(function (e) {
           console.error(e);
         })
+function loadDetails(pokemon) {
+    var url = pokemon.detailsUrl;
+    return fetch(url).then(function (response) {
+      return response.json();
+    }).then(function (details) {
+      // Now we add the details to the item
+      pokemon.imageUrlFront = details.sprites.front_default;
+      pokemon.imageUrlBack = details.sprites.back_default;
+      pokemon.height = details.height;
+      pokemon.weight = details.weight;
+      pokemon.types = [];
+      for (var i = 0; i < details.types.length; i++) {
+        pokemon.types.push(details.types[i].type.name);
       }
-      
-    //Function to  fetch and load details for a specific Pokemon  
-    function loadDetails(item) {
-        let url = item.detailsUrl;
-        return fetch(url).then(function (response) {
-          return response.json();
-        }).then(function (details) {
-          // Now we add the details to the item
-          item.imageUrl = details.sprites.front_default;
-          item.height = details.height;
-          item.weight = details.weight;
-          item.types = details.types;
-          item.abilities = details.abilities;
-        }).catch(function (e) {
-          console.error(e);
-        });
+      pokemon.abilities = [];
+      for (var i = 0; i < details.abilities.length; i++) {
+        pokemon.abilities.push(details.abilities[i].ability.name);
       }
+    }).catch(function (e) {
+      console.error(e);
+    });
+  }
 
   // Function to show deatils of a Pokemon in a modal
   function showModal(pokemon) {
