@@ -129,10 +129,6 @@ function loadDetails(pokemon) {
     modalBody.append(abilitiesElement);
   }
 
-pokemonRepository.loadList().then(function() {
-    // Now the data is loaded!
-    pokemonRepository.getAll().forEach(function(pokemon){
-      pokemonRepository.addListItem(pokemon);
   return {
       add: add,
       getAll: getAll,
@@ -144,9 +140,6 @@ pokemonRepository.loadList().then(function() {
 
 })();
 
-      let listItem = document.createElement("li");
-      listItem.classList.add("list-group-item");
-      listItem.innerText = pokemon.name;
 pokemonRepository.loadList().then(function() {
   // Now the data is loaded!
   pokemonRepository.getAll().forEach(function(pokemon){
