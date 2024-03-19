@@ -1,13 +1,3 @@
-    // Function to display Pokemon information
-    function displayPokemonInfo(pokemon) {
-        document.write(`${pokemon.name} (${pokemon.height} feet) `);
-        if (pokemon.height > 6) {
-            document.write(" - Wow, that's big!");
-        } else if (pokemon.height < 2) {
-            document.write(" - Dang,they are tiny!");
-        }
-        document.write('<br>');
-    }
 var pokemonRepository = (function () {
 
   //pokemonList
