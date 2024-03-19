@@ -16,7 +16,7 @@ return repository;
 function addListItem(pokemon) {
 pokemonRepository.loadDetails(pokemon).then(function() {
   var $row = $(".row");
-  var $card = $('<div class="card text-center" style="width:250px"></div>');
+  var $card = $('<div class="card text-center align-items-center" style="width:250px"></div>');
   var $image = $('<img class="card-img-top" alt="Image of pokemon" style="width:50%" />');
   $image.attr("src", pokemon.imageUrlFront);
 
