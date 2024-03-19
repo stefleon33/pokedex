@@ -55,27 +55,26 @@ function showDetails(item) {
   });
   }
 
+  //Function to fetch and load the Pokemon list from the API
+  function loadList() {
+    return fetch(apiUrl)
+    .then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      json.results.forEach(function (item) {
+        var pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+        console.log(pokemon);
       });
-    }
-        
-
-    //Function to fetch and load the Pokemon list from the API
-    function loadList() {
-        return fetch(apiUrl)
-        .then(function (response) {
-          return response.json();
-        }).then(function (json) {
-          json.results.forEach(function (item) {
-            let pokemon = {
-              name: item.name,
-              detailsUrl: item.url
-            };
-            add(pokemon);
-            console.log(pokemon);
-          });
-        }).catch(function (e) {
-          console.error(e);
-        })
+    }).catch(function (e) {
+      console.error(e);
+    })
+  }
+  
+//Function to  fetch and load details for a specific Pokemon  
 function loadDetails(pokemon) {
     var url = pokemon.detailsUrl;
     return fetch(url).then(function (response) {
