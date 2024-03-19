@@ -1,9 +1,3 @@
-let pokemonRepository = (function () {
-
-    //pokemonList
-    let repository = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-
     // Function to display Pokemon information
     function displayPokemonInfo(pokemon) {
         document.write(`${pokemon.name} (${pokemon.height} feet) `);
@@ -14,6 +8,13 @@ let pokemonRepository = (function () {
         }
         document.write('<br>');
     }
+var pokemonRepository = (function () {
+
+  //pokemonList
+  var repository = [];
+  var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
+//Function to add a Pokemon to the list
 function add(pokemon) {
 repository.push(pokemon);
 }
