@@ -1,0 +1,80 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+Colors used
+
+Text Color (Black): #000000;
+Primary Color (Blue): #1C3FA6;
+Secondary Color (Red): #940000;
+Background Color (Gray): #E3E3E3;
+ */
+
+ body {
+    font-family: "roboto mono", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2;
+    color: #000000;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+    background-color: #e3e3e3;
+    margin:auto;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    }
+  
+  /* Header */
+  h1 {
+    display:inline-block;
+    width: 100%;
+    padding: 20px;
+    font-size: 60px;
+    text-align: center;
+    color: #1C3FA6;
+  }
+
+ 
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  padding: 20px;
+}
+
+.image {
+  text-align: center;
+}
+
+.modal-header{
+  display:inline-block;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #1C3FA6;
+  text-transform: capitalize;
+}
