@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="./Img/favicon.svg">
+
+    <title>Pokedex</title>
+
+    <!--Bootstrap Stylesheet-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Reset default browser stylings-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!--Font info next five lines-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" 
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!--Viewport text to optimize viewing, especially on phones-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <!--Header including the logo and the main navigation-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1C3FA6;">
+        <a class="navbar-brand" href="index.html">
+          <img src="./Img/favicon.svg" width="30" height="30" alt="Poke Ball">
+        </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-warning" href="index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html">About the App <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+      </nav>
+    </header>
+
+    <main>
+        <div class="about">
+            <h1>Behind the Scenes</h1>
+            <p>
+            This application is a collection of Pokemon information. <br>
+
+            Each Pokemon is displayed on its own card with a modal appearing when the "See Details" button is clicked.<br>
+            
+            The app fetches data from an API. <br>
+
+            I used JavaScript, HTML, CSS, Bootstrap, jQuery, and ESLint/Prettier in this project.<br>
+
+            </p>
+        </div>
+    </main>
+   
+ 
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!--Tota11y checks HTML accessibility-->
+     <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
