@@ -21,7 +21,7 @@ pokemonRepository.loadDetails(pokemon).then(function() {
   $image.attr("src", pokemon.imageUrlFront);
 
   var $cardBody = $('<div class ="card-body"></div>');
-  var $cardTitle= $("<h4 class='card-title'>" + pokemon.name + "</h4>");
+  var $cardTitle= $("<h3 class='card-title'>" + pokemon.name + "</h3>");
   var $seeProfile = $(
     '<button type= "button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">See Details</button>'
     );
