@@ -63,3 +63,6 @@ Background Color (Gray): #E3E3E3;
   color: #1C3FA6;
   text-transform: capitalize;
 }
+.modal-footer {
+  justify-content: center;
+}
