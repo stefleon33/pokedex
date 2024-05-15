@@ -79,7 +79,7 @@ Background Color (Gray): #E3E3E3;
   text-transform: capitalize;
 }
 
-.modal-header .close {
+.close {
   padding: 1rem 1rem;
   /* margin: -1rem -1rem -1rem auto; */
   position: absolute;
@@ -87,6 +87,6 @@ Background Color (Gray): #E3E3E3;
   top: 0;
 }
 
-.modal-footer {
+.btn btn-secondary {
   justify-content: center;
 }
