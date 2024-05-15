@@ -81,8 +81,7 @@ Background Color (Gray): #E3E3E3;
 
 .close {
   padding: 1rem 1rem;
-  /* margin: -1rem -1rem -1rem auto; */
-  position: absolute;
+   position: absolute;
   right: 0;
   top: 0;
 }
